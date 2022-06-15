@@ -57,3 +57,18 @@ function infinite(): never {
 
     }
 }
+
+//Type
+//свои типы, но по сути алиас между своей переменной типа и типом
+//так как логин будет равнятся строке
+type Login = string;
+const login: Login = 'admin';
+//будет ошибка так как значение не строка
+//const login2: Login = 2;
+
+//возможность выбирать типы которые будут доступны для переменной
+type ID = string | number;
+const id1: ID = 4221;
+const id2: ID = '4221';
+//ошибка
+//const id3: ID = true;
