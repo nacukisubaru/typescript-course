@@ -72,3 +72,5 @@ const id1: ID = 4221;
 const id2: ID = '4221';
 //ошибка
 //const id3: ID = true;
+
+type SomeType = string | null | undefined;
