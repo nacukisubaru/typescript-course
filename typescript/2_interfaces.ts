@@ -95,3 +95,17 @@ class Clock implements IClock {
         this.time = date;
     }
 }
+
+//возможность типизировать объект в котором все значения всех полей строки
+//чтобы не прописывать тысячу раз
+interface Styles {
+    //key: string говорит о том что сам key должен быть строкой
+    //[key]: string говорит о том что значение ключа должно быть строкой
+    [key: string]: string
+}
+
+const css: Styles = {
+    border: '1px',
+    marginTop: '2px',
+    borderRadius: '5px'
+}
