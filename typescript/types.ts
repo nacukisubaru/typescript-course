@@ -1,4 +1,4 @@
-const str: string = 'Hello';
+const HelloStr: string = 'Hello';
 const isFetching: boolean = true;
 const isLoading: boolean = false;
 
@@ -29,3 +29,31 @@ let param = 42;
 //данные любого типа
 let variable: any = 42;
 variable = 'New string';
+
+console.log(HelloStr);
+
+//указание типа возвращаемых данных
+function sayMyName(name: string): void {
+    console.log(name);
+}
+
+//функция с типом string
+function myName(): string {
+    return "Хайзенберг";
+}
+
+sayMyName(myName());
+
+//Never
+//Тип который указываем когда уверены что функция вернет либо ошибку
+//либо будет работать бесконечно и никода не завершиться. На практике это может быть
+//какой нибудь воркер
+function throwError(message: string): never {
+    throw new Error('Ошибка'); 
+}
+
+function infinite(): never {
+    while(true) {
+
+    }
+}
