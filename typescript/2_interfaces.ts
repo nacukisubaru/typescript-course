@@ -61,3 +61,37 @@ const rect3 = {} as Rect
 //тоже самое только generic
 const rect4 = <Rect>{}
 
+// ======================
+
+//наследование интерфейсом интерфейса(гибкость)
+interface RectWithArea extends Rect {
+    getArea: () => number
+}
+
+const rect5: RectWithArea = {
+    id: '123',
+    size: {
+        width: 20,
+        height: 10
+    },
+    getArea(): number {
+        return this.size.width * this.size.height
+    }
+}
+
+
+// =======================
+
+interface IClock {
+    time: Date
+    setTime(date: Date): void
+}
+
+//класс реализует интерфейс
+class Clock implements IClock {
+    time: Date = new Date();
+    
+    setTime(date: Date): void {
+        this.time = date;
+    }
+}
